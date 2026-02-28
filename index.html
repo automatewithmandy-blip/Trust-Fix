@@ -6,6 +6,7 @@
 </head>
 <body>
 
+    <!-- NAVBAR -->
     <nav>
         <div class="logo">Vengurla Home Services</div>
         <a href="form.html" class="nav-btn">Give Feedback</a>
@@ -16,7 +17,7 @@
         <h1>Trusted Plumbing & Electrical Services in Vengurla</h1>
         <p>
             We connect reliable plumbers and electricians to households 
-            across Vengurla — quickly, safely and transparently.
+            across Vengurla — quickly, safely, and transparently.
         </p>
         <a href="form.html" class="primary-btn">Share Your Opinion</a>
     </section>
@@ -25,23 +26,34 @@
     <section class="services">
         <h2>Our Core Services</h2>
 
-        <div class="service-container">
-            <div class="service-card">
-                <h3>🔧 Plumbing</h3>
+        <!-- PLUMBING -->
+        <div class="service-item">
+            <div class="service-header" onclick="toggleService('plumbing')">
+                🔧 Plumbing
+            </div>
+            <div class="service-content" id="plumbing">
+                <img src="plumbing.jpg" alt="Plumbing Work">
                 <p>
                     Tap repairs, leakage fixing, pipe installation,
-                    bathroom fittings and emergency plumbing services.
-                </p>
-            </div>
-
-            <div class="service-card">
-                <h3>💡 Electrical</h3>
-                <p>
-                    Wiring repairs, switchboard issues, fan & light
-                    installation and safe electrical maintenance.
+                    bathroom fittings, and emergency plumbing services.
                 </p>
             </div>
         </div>
+
+        <!-- ELECTRICAL -->
+        <div class="service-item">
+            <div class="service-header" onclick="toggleService('electrical')">
+                💡 Electrical
+            </div>
+            <div class="service-content" id="electrical">
+                <img src="electrical.jpg" alt="Electrical Work">
+                <p>
+                    Wiring repairs, switchboard issues, fan & light installation,
+                    and safe electrical maintenance.
+                </p>
+            </div>
+        </div>
+
     </section>
 
     <!-- WHY US -->
@@ -58,14 +70,27 @@
     <section class="future">
         <h2>Coming Soon</h2>
         <p>
-            Online booking system, transparent pricing and verified service
+            Online booking system, transparent pricing, and verified service
             partners — all in one simple website.
         </p>
     </section>
 
+    <!-- FOOTER -->
     <footer>
         © 2026 Vengurla Home Services | Built for Vengurla
     </footer>
+
+    <!-- JAVASCRIPT FOR DROPDOWNS -->
+    <script>
+        function toggleService(id) {
+            var content = document.getElementById(id);
+            if (content.style.display === "block") {
+                content.style.display = "none";
+            } else {
+                content.style.display = "block";
+            }
+        }
+    </script>
 
 </body>
 </html>
